@@ -1,27 +1,22 @@
-# JS | Vikings *Object Oriented Programming*
+# TS | Vikings *Object Oriented Programming*
 
 ## Introducción
 
-En este ejercicio tendrás que aplicar los conceptos de programación orientada a objetos y herencia con JavaScript a nuestros amigos vikingos.
+En este ejercicio tendrás que aplicar los conceptos de programación orientada a objetos y herencia con TypeScript a nuestros amigos vikingos.
 
 ## Requisitos
 
-- [Fork del repositorio](https://guides.github.com/activities/forking/)
-- Clonado a tu repositorio
-- Asegurate de utilizar las herramientas de desarrollo de OOP y herencia
-
+- Se te asignará el repositorio desde GitHubclassroom. Busca tu usuario y acepta la tarea.
 
 ## Entrega
+- Clona el repositorio a tu entorno local: git clone `<NOMBRE DEL REPO>`
+- Realiza los siguientes pasos para actualizar el repositorio de git :
 
-- Una vez completado el ejercicio ejecuta los siguientes comandos:
-
-```
-git add .
-git commit -m "done"
-git push origin master
-```
-
-- Desde tu navegador [crea un Pull Request](https://help.github.com/articles/creating-a-pull-request/)
+  ```
+    git add .
+    git commit -m "<INFORMA AQUÍ EL MOTIVO DEL COMMIT>"
+    git push origin master
+  ```
 
 ### Tests, test, tests!
 
@@ -32,21 +27,26 @@ Seguimos trabajando con tests:
 
 **Ejecución de los tests**
 
-Verás que no se ejecuta ninguno de los tests construidos. Abre el fichero `tests/VikingSpec.js`  y descomenta la función `it()` de las **líneas 10-12**:
+Tras la ejecución comprobarás que sale el siguiente mensaje en la consola:
+```sh
+ FAIL  src/soldier/Soldier.test.ts
+  ● Test suite failed to run
+
+    Your test suite must contain at least one test.
+
+      at onResult (node_modules/@jest/core/build/TestScheduler.js:133:18)
+      at node_modules/@jest/core/build/TestScheduler.js:254:19
+      at node_modules/emittery/index.js:363:13
+          at Array.map (<anonymous>)
+      at Emittery.emit (node_modules/emittery/index.js:361:23)
+```
+Abre el fichero `soldier/Soldier.test.ts`  y descomenta la función `test()` de las **línea 11**:
 
 ```javascript
   describe("constructor function", function () {
-    it("should receive 2 arguments (health & strength)", function () {
-      expect(Soldier.length).toEqual(2);
-    });
 
-    // it("should receive the health property as its 1st argument", function () {
-    //   expect(soldier.health).toEqual(health);
-    // });
-
-    // it("should receive the strength property as its 2nd argument", function () {
-    //   expect(soldier.strength).toEqual(strength);
-    // });
+     // test('should receive 2 arguments: health and strength ', ()=> expect(Soldier.length).toEqual(2));
+  ...
   });
 ```
 
@@ -56,20 +56,12 @@ Ahora el test (_should receive 2 arguments (health & strength)_) está fallando!
 
 **Escribe el código**
 
-Ahora tienes que escribir el código correcto en el fichero `src/viking.js` para pasar el test. El código que encontrarás es el siguiente:
+Ahora tienes que escribir el código correcto en el fichero `src/soldier/Soldier.ts` para pasar el test. El código que encontrarás es el siguiente:
 
 ```javascript
 // Soldier
-class Soldier {}
+export class Soldier {}
 
-// Viking
-class Viking {}
-
-// Saxon
-class Saxon {}
-
-// War
-class War  {}
 ```
 
 En este caso, el test dice que  _Soldier constructor function should receive 2 arguments (health & strength)_, así que tienes que escribir el código correcto que pase el test. Implementa la función constructora de la clase `Soldier` que reciba dos parámetros:
@@ -79,19 +71,13 @@ En este caso, el test dice que  _Soldier constructor function should receive 2 a
 class Soldier{
   constructor(healthArg, strengthArg) {}
 }
-// Viking
-class Viking  {}
-
-// Saxon
-class Saxon  {}
-
-// War
-class War  {}
 ```
 
 **Ejecuta todos los tests**
 
-Ahora que ya has pasado el primer test, descomenta el siguiente, refresca la página y sigue codificando para pasar los tests.
+Ahora que ya has pasado el primer test, descomenta el siguiente y sigue codificando para pasar los tests.
+
+Continua haciendo lo mismo con los ficheros de test de los archivos: `Viking.ts`, `Saxon.ts` y `War.ts`.
 
 ## Ejercicio
 
