@@ -25,9 +25,12 @@ git push origin master
 
 ### Tests, test, tests!
 
-Seguimos trabajando con tests. Para ello abre el fichero `SpecRunner.html`!
+Seguimos trabajando con tests:
+1. instala los módulos con el comando `npm install`
+2. ejecuta los tests con el comando `npm test`
 
-**Ejecuta los tests**
+
+**Ejecución de los tests**
 
 Verás que no se ejecuta ninguno de los tests construidos. Abre el fichero `tests/VikingSpec.js`  y descomenta la función `it()` de las **líneas 10-12**:
 
@@ -130,7 +133,7 @@ Un `Viking` es un `Soldier` con una propiedad adicional, su nombre (`name`). Ade
 Modifica el constructor de la clase `Viking` para que herede de la clase `Soldier`, reimplementa el método `receiveDamage()` dentro del `Viking`, y añade el nuevo método `battleCry()`.
 
 #### herencia
-- `Viking` debe extender de la clase  `Soldier` 
+- `Viking` debe extender de la clase  `Soldier`
 
 #### `constructor()`
 - debe recibir **3 argumentos** (name, health & strength)
